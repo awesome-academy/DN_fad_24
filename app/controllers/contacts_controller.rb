@@ -1,5 +1,5 @@
 class ContactsController < ApplicationController
-  before_action :authenticate_user!, only: %i(create)
+  authorize_resource
 
   def new
     @contact = Contact.new

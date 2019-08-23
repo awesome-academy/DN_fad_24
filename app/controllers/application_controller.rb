@@ -15,17 +15,21 @@ class ApplicationController < ActionController::Base
     {locale: I18n.locale}
   end
 
-  def admin_user
-    return if current_user.admin?
-    flash[:danger] = t "controllers.not_right"
-    redirect_to root_path
-  end
-
   def config_permitted_parameters
     register_attrs = [:name, :phone, :email, :password, :password_confirmation]
     update_attrs = [:name, :phone, :email, :password, :password_confirmation,
                     :picture]
     devise_parameter_sanitizer.permit :sign_up, keys: register_attrs
     devise_parameter_sanitizer.permit :account_update, keys: update_attrs
+  end
+
+  rescue_from CanCan::AccessDenied do |_exception|
+    if user_signed_in?
+      flash[:danger] = t "controllers.application.not_permition"
+      redirect_to root_path
+    else
+      flash[:danger] = t "controllers.application.login_please"
+      redirect_to new_user_session_path
+    end
   end
 end

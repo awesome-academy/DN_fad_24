@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
-  before_action :authenticate_user!, only: :new
+  authorize_resource
+
   def new
     list_product check_cookie_cart
     return @order = Order.new if @products.any?

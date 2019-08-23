@@ -1,6 +1,5 @@
 class Admin::OrdersController < ApplicationController
-  before_action :authenticate_user!
-  before_action :admin_user
+  authorize_resource
   before_action :load_order, only: %i(edit update show)
 
   def index

@@ -1,6 +1,5 @@
 class Admin::ContactsController < ApplicationController
-  before_action :authenticate_user!
-  before_action :admin_user
+  authorize_resource
   before_action :load_contact, only: %i(edit update)
 
   def index

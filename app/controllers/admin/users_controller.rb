@@ -1,7 +1,6 @@
 class Admin::UsersController < ApplicationController
-  before_action :authenticate_user!
-  before_action :admin_user
   before_action :load_user, except: %i(create new index)
+  authorize_resource
 
   def index
     @users = User.sort_users.paginate page: params[:page],

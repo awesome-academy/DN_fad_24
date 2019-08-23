@@ -63,6 +63,9 @@ en:
     account:
       success: "Account activated"
       invalid_link: "Error link"
+    application:
+      not_permition: "You not permition"
+      login_please: "Login, please!"
     orders:
       product_cart_empty: "Cart empty"
       order_success: "Order successful"

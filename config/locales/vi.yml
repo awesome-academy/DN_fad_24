@@ -63,6 +63,9 @@ vi:
     account:
       success: "Tài khoản được kích hoạt"
       invalid_link: "Link bị lỗi"
+    application:
+      not_permition: "Bạn không có quyền."
+      login_please: "Vui lòng đăng nhập."
     orders:
       product_cart_empty: "Giỏ hàng trống"
       order_success: "Đặt hàng thành công"
