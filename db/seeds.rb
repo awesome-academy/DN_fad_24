@@ -1,5 +1,5 @@
 User.create!(name: "LocDepTrai",
-             email: "admin@gmailcd.com",
+             email: "admin@gmail.com",
              password: "123123",
              password_confirmation: "123123",
              role: 1,

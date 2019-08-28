@@ -46,6 +46,8 @@ en:
         update_success: "Update successful"
         update_fail: "Update fail"
         not_found_contact: "Contact not found"
+      import:
+        not_file: "Please select file to import!"
       products:
         add_success: "Add successful"
         add_fail: "Add fail"
@@ -136,6 +138,10 @@ en:
         title: "Edit status"
         status: "Status"
         save: "Save"
+    imports:
+      index:
+        title: "Import data from csv file"
+        import: "Import"
     orders:
       index:
         title: "History Orders"
@@ -204,7 +210,7 @@ en:
     users:
       index:
         title: "Users"
-        add_user: "Add user"
+        add_user: "Add user "
         name: "Name"
         picture: "Avatar"
         email: "Email"
@@ -214,6 +220,7 @@ en:
         function: "Function"
         search: "Enter the user name..."
         export: "Export all user"
+        import: "Enter users from csv file"
       user:
         edit: "Edit"
         delete: "Delete"

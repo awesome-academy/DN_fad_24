@@ -46,6 +46,8 @@ vi:
         update_success: "Cập nhật thành công"
         update_fail: "Cập nhật thất bại"
         not_found_contact: "Không tồn tại phản hồi"
+      import:
+        not_file: "Vui lòng chọn file import!"
       products:
         add_success: "Thêm thành công"
         add_fail: "Thêm thất bại"
@@ -136,11 +138,15 @@ vi:
         title: "Sửa trạng thái"
         status: "Trạng thái"
         save: "Lưu"
+    imports:
+      index:
+        title: "Nhập dữ liệu file csv"
+        import: "Nhập"
     orders:
       index:
         title: "Lịch sử đơn mua"
         name: "Tên"
-        phone: "Số điện thoại đặt hàng"
+        phone: "Số điện thoại"
         address: "Địa chỉ nhận hàng"
         order_date: "Ngày đặt hàng"
         status: "Trạng thái đơn hàng"
@@ -204,7 +210,7 @@ vi:
     users:
       index:
         title: "Người dùng"
-        add_user: "Thêm nguời dùng"
+        add_user: "Thêm nguời dùng "
         name: "Tên"
         picture: "Ảnh đại diện"
         email: "Email"
@@ -214,6 +220,7 @@ vi:
         function: "Chức năng"
         search: "Nhập tên người dùng..."
         export: "Xuất ra tất cả người dùng"
+        import: "Nhập người dùng từ file csv"
       user:
         edit: "Sửa"
         delete: "Xóa"
@@ -309,7 +316,7 @@ vi:
     index:
       title: "Lịch sử đơn mua"
       name: "Tên"
-      phone: "Số điện thoại đặt hàng"
+      phone: "Số điện thoại"
       address: "Địa chỉ nhận hàng"
       order_date: "Ngày đặt hàng"
       status: "Trạng thái đơn hàng"

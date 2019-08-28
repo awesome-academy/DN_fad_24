@@ -19,6 +19,7 @@ Rails.application.routes.draw do
       resources :orders
       resources :contacts
       resources :export_users, only: :index
+      resources :imports
     end
     resources :products
     resources :carts

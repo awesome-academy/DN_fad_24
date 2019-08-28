@@ -1,6 +1,8 @@
 <% provide :title, t(".title") %>
 <div class="content">
-  <%= link_to t(".add_user"), new_admin_user_path, class: "add_user" %>
+  <%= link_to t(".add_user"), new_admin_user_path, class: "add_user" %> |
+  <%= link_to t(".import"), admin_imports_path %> |
+  <%= link_to t(".export"), admin_export_users_path(format: :csv) %>
   <table class="table">
     <thead class=" text-primary">
       <th>
@@ -33,6 +35,5 @@
       </div>
     </div>
   </table>
-  <%= link_to t(".export"), admin_export_users_path(format: :csv) %>
   <%= will_paginate %>
 </div>
