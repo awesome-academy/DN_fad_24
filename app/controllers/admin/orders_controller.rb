@@ -1,11 +1,13 @@
 class Admin::OrdersController < ApplicationController
-  before_action :logged_in_user
-  before_action :admin_user
+  authorize_resource
   before_action :load_order, only: %i(edit update show)
 
   def index
-    @orders = Order.sort_orders.paginate page: params[:page],
+    @q = Order.ransack(params[:q])
+    @orders = @q.result.sort_orders.paginate page: params[:page],
       per_page: Settings.perpage
+    return if @orders.present?
+    flash[:danger] = t "controllers.search_fail"
   end
 
   def show

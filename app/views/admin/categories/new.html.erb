@@ -8,9 +8,6 @@
     <%= f.label :name, t(".name")%>
     <%= f.text_field :name, class: "form-control" %>
 
-    <%= f.label :name, t(".new_name_category")%>
-    <%= f.select :parent_id, load_parent_category, include_blank: true %>
-
     <%= f.submit t(".save_changes"), class: "btn btn-primary" %>
     <% end %>
   </div>

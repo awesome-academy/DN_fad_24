@@ -32,6 +32,8 @@ vi:
   controllers:
     before_order: "Vui lòng đăng nhập."
     not_right: "Không có quyền!!!"
+    search_fail: "Không có kết quả tìm kiếm cho từ khóa"
+    export_fail: "Bạn không có quyền truy cập."
     admin:
       categories:
         add_success: "Thêm thành công"
@@ -44,6 +46,8 @@ vi:
         update_success: "Cập nhật thành công"
         update_fail: "Cập nhật thất bại"
         not_found_contact: "Không tồn tại phản hồi"
+      import:
+        not_file: "Vui lòng chọn file import!"
       products:
         add_success: "Thêm thành công"
         add_fail: "Thêm thất bại"
@@ -63,6 +67,9 @@ vi:
     account:
       success: "Tài khoản được kích hoạt"
       invalid_link: "Link bị lỗi"
+    application:
+      not_permition: "Bạn không có quyền."
+      login_please: "Vui lòng đăng nhập."
     orders:
       product_cart_empty: "Giỏ hàng trống"
       order_success: "Đặt hàng thành công"
@@ -124,23 +131,29 @@ vi:
         description: "Chi tiết"
         date_feaback: "Ngày phản hồi"
         function: "Chức năng"
+        search: "Nhập tên người phản hồi..."
       contact:
         edit: "Sửa"
       edit:
         title: "Sửa trạng thái"
         status: "Trạng thái"
         save: "Lưu"
+    imports:
+      index:
+        title: "Nhập dữ liệu file csv"
+        import: "Nhập"
     orders:
       index:
         title: "Lịch sử đơn mua"
         name: "Tên"
-        phone: "Số điện thoại đặt hàng"
+        phone: "Số điện thoại"
         address: "Địa chỉ nhận hàng"
         order_date: "Ngày đặt hàng"
         status: "Trạng thái đơn hàng"
         detail: "Chi tiết đơn hàng"
         function: "Chức năng"
         date_success: "Ngày giao"
+        search: "Nhập vào tên người mua..."
       order:
         detail: "Chi tiết"
         edit: "Sửa"
@@ -183,6 +196,7 @@ vi:
         status: "Trạng thái"
         category: "Danh mục"
         function: "Chức năng"
+        search: "Nhập tên sản phẩm..."
       new:
         title: "Thêm sản phẩm"
       create:
@@ -196,7 +210,7 @@ vi:
     users:
       index:
         title: "Người dùng"
-        add_user: "Thêm nguời dùng"
+        add_user: "Thêm nguời dùng "
         name: "Tên"
         picture: "Ảnh đại diện"
         email: "Email"
@@ -204,6 +218,9 @@ vi:
         activated: "Trạng thái"
         role: "Quyền"
         function: "Chức năng"
+        search: "Nhập tên người dùng..."
+        export: "Xuất ra tất cả người dùng"
+        import: "Nhập người dùng từ file csv"
       user:
         edit: "Sửa"
         delete: "Xóa"
@@ -299,7 +316,7 @@ vi:
     index:
       title: "Lịch sử đơn mua"
       name: "Tên"
-      phone: "Số điện thoại đặt hàng"
+      phone: "Số điện thoại"
       address: "Địa chỉ nhận hàng"
       order_date: "Ngày đặt hàng"
       status: "Trạng thái đơn hàng"
@@ -333,6 +350,7 @@ vi:
       products: "Sản phẩm"
       filter: "Lọc"
       search: "Tìm kiếm"
+      name: "Nhập tên sản phẩm..."
   user_mailer:
     account_activation:
       hi: "Chào bạn, "

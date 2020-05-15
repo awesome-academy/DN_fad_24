@@ -1,14 +1,6 @@
 <tr>
   <td>
     <%= category.name %>
-    <% load_child_category(category) %>
-    <% @child_categories.each do |cc| %>
-      <li class="child_cat">
-        <%= cc.name %>
-        <%= link_to t(".edit"), edit_admin_category_path(cc), method: :get %> |
-        <%= link_to t(".delete"), admin_category_path(cc), method: :delete, data: {confirm: t(".confirm")} %>
-      </li>
-    <% end %>
   </td>
   <td><%= link_to t(".edit"), edit_admin_category_path(category), method: :get %> |
     <%= link_to t(".delete"), admin_category_path(category), method: :delete, data: {confirm: t(".confirm")} %></td>

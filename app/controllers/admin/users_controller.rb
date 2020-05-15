@@ -1,11 +1,13 @@
 class Admin::UsersController < ApplicationController
-  before_action :logged_in_user
-  before_action :admin_user
   before_action :load_user, except: %i(create new index)
+  authorize_resource
 
   def index
-    @users = User.sort_users.paginate page: params[:page],
+    @q = User.ransack(params[:q])
+    @users = @q.result.sort_users.paginate page: params[:page],
       per_page: Settings.perpage
+    return if @users.present?
+    flash[:danger] = t "controllers.search_fail"
   end
 
   def new
@@ -47,7 +49,7 @@ class Admin::UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:name, :picture, :email, :phone,
-      :password, :activated, :role)
+      :password, :role)
   end
 
   def load_user

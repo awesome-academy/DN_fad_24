@@ -32,6 +32,8 @@ en:
   controllers:
     before_order: "Login, please!!!"
     not_right: "Not right!!!"
+    search_fail: "Not result for the query"
+    export_fail: "You do not have access."
     admin:
       categories:
         add_success: "Add successful"
@@ -44,6 +46,8 @@ en:
         update_success: "Update successful"
         update_fail: "Update fail"
         not_found_contact: "Contact not found"
+      import:
+        not_file: "Please select file to import!"
       products:
         add_success: "Add successful"
         add_fail: "Add fail"
@@ -63,6 +67,9 @@ en:
     account:
       success: "Account activated"
       invalid_link: "Error link"
+    application:
+      not_permition: "You not permition"
+      login_please: "Login, please!"
     orders:
       product_cart_empty: "Cart empty"
       order_success: "Order successful"
@@ -124,12 +131,17 @@ en:
         description: "Description"
         date_feaback: "Date feaback"
         function: "Function"
+        search: "Enter the feedback user..."
       contact:
         edit: "Edit"
       edit:
         title: "Edit status"
         status: "Status"
         save: "Save"
+    imports:
+      index:
+        title: "Import data from csv file"
+        import: "Import"
     orders:
       index:
         title: "History Orders"
@@ -141,6 +153,7 @@ en:
         detail: "Detail"
         function: "Function"
         date_success: "Date success"
+        search: "Enter the buyer name..."
       order:
         detail: "Detail"
         edit: "Edit"
@@ -183,6 +196,7 @@ en:
         status: "Status"
         category: "Category"
         function: "Function"
+        search: "Enter the product name..."
       new:
         title: "Add category"
       create:
@@ -196,7 +210,7 @@ en:
     users:
       index:
         title: "Users"
-        add_user: "Add user"
+        add_user: "Add user "
         name: "Name"
         picture: "Avatar"
         email: "Email"
@@ -204,6 +218,9 @@ en:
         activated: "Status"
         role: "Role"
         function: "Function"
+        search: "Enter the user name..."
+        export: "Export all user"
+        import: "Enter users from csv file"
       user:
         edit: "Edit"
         delete: "Delete"
@@ -333,6 +350,7 @@ en:
       products: "Products"
       filter: "Filter"
       search: "Search"
+      name: "Enter the product..."
   user_mailer:
     account_activation:
       hi: "Hello, "

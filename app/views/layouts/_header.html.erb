@@ -11,11 +11,11 @@
           <%= link_to t(".language_vi"), locale:"vi" %>
         </div>
         <div class="right-top-bar flex-w h-full">
-          <% if logged_in? %>
+          <% if user_signed_in? %>
             <%= link_to t(".my_account"), user_path(current_user.id), class: "flex-c-m trans-04 p-lr-25" %>
-            <%= link_to t(".logout"), logout_path, method: :delete, class: "flex-c-m trans-04 p-lr-25" %>
+            <%= link_to t(".logout"), destroy_user_session_path, method: :delete, class: "flex-c-m trans-04 p-lr-25" %>
           <% else %>
-            <li><%= link_to t(".login"), login_path, class: "flex-c-m trans-04 p-lr-25" %></li>
+            <li><%= link_to t(".login"), new_user_session_path, class: "flex-c-m trans-04 p-lr-25" %></li>
           <% end %>
         </div>
       </div>
@@ -35,7 +35,6 @@
             <li>
               <%= link_to t(".category") %>
               <ul class="sub-menu">
-                <li><a href="#">Trà sữa</a></li>
                 <li><a href="#">Nước trái cây</a></li>
                 <li><a href="#">XXX</a></li>
               </ul>
@@ -49,7 +48,7 @@
             <li>
               <%= link_to t(".contact"), new_contact_path %>
             </li>
-            <% if logged_in? %>
+            <% if user_signed_in? %>
               <% if current_user.admin? %>
                 <li>
                   <%= link_to t(".manager") %>
@@ -69,9 +68,6 @@
         </div>
         <!-- Icon header -->
         <div class="wrap-icon-header flex-w flex-r-m">
-          <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
-            <i class="fas fa-search"></i>
-          </div>
           <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" id="quantity_products" data-notify="<%= size_cart %>">
             <%= link_to carts_path do %>
               <i class="fas fa-cart-plus"></i>
@@ -167,19 +163,5 @@
         <a href="#">Liên hệ</a>
       </li>
     </ul>
-  </div>
-  <!-- Modal Search -->
-  <div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
-    <div class="container-search-header">
-      <button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
-      	<img src="assets/icon-close2.png" alt="CLOSE">
-      </button>
-      <form class="wrap-search-header flex-w p-l-15">
-        <button class="flex-c-m trans-04">
-          <i class="fas fa-search"></i>
-        </button>
-        <input class="plh3" type="text" name="search" placeholder="Search...">
-      </form>
-    </div>
   </div>
 </header>

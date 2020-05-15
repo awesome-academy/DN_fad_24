@@ -1,11 +1,13 @@
 class Admin::ContactsController < ApplicationController
-  before_action :logged_in_user
-  before_action :admin_user
+  authorize_resource
   before_action :load_contact, only: %i(edit update)
 
   def index
-    @contacts = Contact.sort_contacts.paginate page: params[:page],
+    @q = Contact.ransack(params[:q])
+    @contacts = @q.result.sort_contacts.paginate page: params[:page],
       per_page: Settings.perpage
+    return if @contacts.present?
+    flash[:danger] = t "controllers.search_fail"
   end
 
   def edit; end

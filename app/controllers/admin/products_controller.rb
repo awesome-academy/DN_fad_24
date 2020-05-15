@@ -1,12 +1,14 @@
 class Admin::ProductsController < ApplicationController
-  before_action :logged_in_user
-  before_action :admin_user
+  authorize_resource
   before_action :load_product, only: %i(edit update destroy)
   before_action :load_categories, only: %i(edit new)
 
   def index
-    @products = Product.sort_products.paginate page: params[:page],
+    @q = Product.ransack(params[:q])
+    @products = @q.result.sort_products.paginate page: params[:page],
       per_page: Settings.perpage
+    return if @products.present?
+    flash[:danger] = t "controllers.search_fail"
   end
 
   def new

@@ -94,3 +94,43 @@ input[type=number]::-webkit-inner-spin-button {
 .show_order_admin {
   color: rgb(73, 41, 146);
 }
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav_input {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  background: #ffffcc;
+}
+
+.add_user {
+  float: left;
+}
+
+.content_import {
+  height: 353px;
+  padding-left: 60px;
+}
+
+table.qr-code {
+  border-width: 0;
+  border-style: none;
+  border-color: #0000ff;
+  border-collapse: collapse;
+}
+table.qr-code td {
+  border-width: 0;
+  border-style: none;
+  border-color: #0000ff;
+  border-collapse: collapse;
+  padding: 0;
+  margin: 0;
+  width: 15px;
+  height: 15px;
+}
+table.qr-code td.black { background-color: #000; }
+table.qr-code td.white { background-color: #fff; }

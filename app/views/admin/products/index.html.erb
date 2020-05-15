@@ -1,6 +1,6 @@
 <% provide :title, t(".title") %>
 <div class="content">
-  <%= link_to t(".add_product"), new_admin_product_path, class: "add_product" %>
+  <%= link_to t(".add_product"), new_admin_product_path, class: "add_user" %>
   <table class="table">
     <thead class=" text-primary">
       <th>
@@ -31,6 +31,13 @@
     <tbody>
       <%= render @products %>
     </tbody>
+    <div class="topnav">
+      <div class="search-container">
+        <%= search_form_for @q, url: admin_products_path do |f| %>
+          <%= f.search_field :name_cont, placeholder: t(".search"), class: "topnav_input" %>
+        <% end %>
+      </div>
+    </div>
   </table>
   <%= will_paginate %>
 </div>

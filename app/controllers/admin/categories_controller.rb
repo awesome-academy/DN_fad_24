@@ -1,4 +1,5 @@
 class Admin::CategoriesController < ApplicationController
+  authorize_resource
   before_action :load_category, only: %i(edit update destroy)
 
   def index
