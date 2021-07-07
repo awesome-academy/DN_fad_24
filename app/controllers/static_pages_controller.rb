@@ -14,3 +14,4 @@ class StaticPagesController < ApplicationController
 
   def contact; end
 end
+dong nay dungsadasda	
